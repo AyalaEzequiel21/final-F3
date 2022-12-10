@@ -1,0 +1,11 @@
+@import './custom.scss';
+
+.bgLight{
+    background-color: $light;
+    color: $dark;
+}
+
+.bgDark{
+    background-color: $dark-back;
+    color: $light;
+}

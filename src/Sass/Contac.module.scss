@@ -1,0 +1,16 @@
+@import './custom.scss';
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+
+    h2{
+        margin: 0
+    }
+    p{
+        margin-bottom: 7rem;
+    }
+}
