@@ -1,0 +1,21 @@
+@import '../colors.scss';
+
+.footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    height: 40px;
+
+    img{
+        width: 200px;
+        margin: 0
+    }
+}
+
+.dark{
+    background-color: $lightOscuro
+}
+.light{
+    background-color: $lightMedio;
+}

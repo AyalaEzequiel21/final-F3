@@ -1,12 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import img from "../images/doctor.jpg"
 import { useContextGlobal } from "./utils/Context";
+import img from "../images/doctor.jpg"
 import styles from "../Sass/Components/Card.module.scss"
 
 const Card = ({ name, username, id }) => {
 
-  const {dispatchFavs, stateFavs} = useContextGlobal()
+  const {dispatchFavs, stateFavs, isDarkMode} = useContextGlobal()
 
   function validarId(id){
    let resulter = stateFavs.find((item) =>{
@@ -16,7 +15,7 @@ const Card = ({ name, username, id }) => {
   }
 
   const addFav = ()=>{
-    console.log(stateFavs);
+    
     // Aqui iria la logica para agregar la Card en el localStorage
     const payload = {
       name: name,
@@ -26,8 +25,9 @@ const Card = ({ name, username, id }) => {
     validarId(id)? alert("Ese dentista ya esta en favs") : dispatchFavs({type: 'ADD_FAVS', payload: payload})
   }
 
+
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${isDarkMode? styles.dark : styles.light}`}>
         {/* En cada card deberan mostrar en name - username y el id */}
         <img src={img} alt="img"/>
       <Link to={`/dentist/${id}`}>

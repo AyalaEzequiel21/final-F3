@@ -1,29 +1,70 @@
-@import "../custom.scss";
+@import "../colors.scss";
 
 
 .card{
     border-radius: 20px;
-    box-shadow:  20px 20px 60px #d0d1d0,
-             -20px -20px 60px #ffffff;
+    border: solid 1px;
     height: 20rem;
     width: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1.5rem;
 
     img{
         height: 10rem;
-        width: 12rem;
+        width: 10rem;
     }
 
     div{
         text-align: center;
     }
     button{
+        border-radius: 20px;
+    }
+    
+}
+
+.light{
+    background-color: $lightClaro;
+    border-color: $lightMedio;
+
+    h3{
+        color: $lightFuerte;
+    }
+    p{
+        color: $lightFuerte;
+    }
+    button{
+        background-color: $lightMedio;
+        color: $lightClaro;
+
         &:hover{
-            background-color: lightblue
+            background-color: $lightFuerte;
+        }
+    }
+
+}
+
+.dark{
+    background-color: $lightMedio;
+    border-color: $lightFuerte;
+
+    h3{
+        color: $lightClaro;
+    }
+    p{
+        color: $lightClaro
+    }
+    button{
+        background-color: $darkClaro;
+        color: $lightFuerte;
+
+        &:hover{
+            background-color: $lightFuerte;
+            color: $lightClaro;
+
         }
     }
 }

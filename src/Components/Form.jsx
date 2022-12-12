@@ -1,10 +1,13 @@
 import { useState } from "react";
 import styles from "../Sass/Components/Form.module.scss"
+import { useContextGlobal } from "./utils/Context";
 
 
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
   const [message, setMessage] = useState('')
+
+  const {isDarkMode} = useContextGlobal()
 
   const [info, setInfo] = useState({
     name: "",
@@ -44,7 +47,7 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form onSubmit={handleSubmit} className={`${styles.form} ${isDarkMode? styles.dark : styles.light}`}>
         <div>
           <label>Nombre</label>
           <input type="text" name="name" onChange={handleChange} required/>
@@ -54,7 +57,7 @@ const Form = () => {
           <input type="email" name="email" onChange={handleChange} required/>
         </div>
         <button>Enviar</button>
-        <p>{message}</p>
+        {message !== "" && <p>{message}</p>}
       </form>
     </>
   );

@@ -1,0 +1,40 @@
+@import '../colors.scss';
+
+.nav{
+    width: 100vw;
+    margin-right: 0;
+    .item{
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 1rem;
+    }
+    button{
+        border-radius: 50px;
+        height: 40px;
+        width: 40px;
+        margin: auto 0;
+    }
+}
+
+.dark{
+    background-color: $lightOscuro;
+    
+    .item{
+        color: $lightClaro
+    }
+    button{
+        background-color: $lightClaro;
+    }
+    
+}
+
+.light{
+    background-color: $lightMedio;
+
+    .item{
+        color: $lightClaro 
+    }
+    button{
+        background-color: $darkOscuro;
+    }
+}

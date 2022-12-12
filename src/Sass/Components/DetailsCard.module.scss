@@ -1,10 +1,15 @@
-@import '../custom.scss';
+@import '../colors.scss';
 
 .detailsCard{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    img{
+        height: 15rem;
+        width: 15rem;
+    }
 
     span{
         color: blue;

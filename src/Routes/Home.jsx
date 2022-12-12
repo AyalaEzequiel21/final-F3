@@ -1,3 +1,4 @@
+
 import Card from '../Components/Card'
 import { useContextGlobal } from '../Components/utils/Context'
 import styles from '../Sass/Home.module.scss'
@@ -6,12 +7,12 @@ import styles from '../Sass/Home.module.scss'
 
 const Home = () => {
 
-  const {data, isDark} = useContextGlobal()
-  // console.log(data);
+  const {data, isDarkMode} = useContextGlobal()
+  
   return (
-    <main className={isDark? styles.bgDark : styles.bgLight} >
-      <h1>Home</h1>
-      <div className='card-grid'>
+    <main className={`${styles.home} ${isDarkMode? styles.dark : styles.light}`}>
+      <h1 className={styles.title}>Home</h1>
+      <div className={styles.container}>
         {data?.map((item) => (
           <Card key={item.id} name={item.name} username={item.username} id={item.id}/>        )
         )}     

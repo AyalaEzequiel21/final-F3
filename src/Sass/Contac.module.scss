@@ -1,16 +1,33 @@
-@import './custom.scss';
+@import './colors.scss';
 
 .contact{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
 
-    h2{
+    h1{
         margin: 0
     }
     p{
-        margin-bottom: 7rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.dark{
+    background-color: $darkClaro;
+
+    h1{
+        color: $darkOscuro;        
+    }
+    p{
+        color: $darkOscuro;        
+    }
+}
+
+.light{
+    h1{
+        color: $lightFuerte;
     }
 }

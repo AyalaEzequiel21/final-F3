@@ -1,13 +1,11 @@
 @import './colors.scss';
 
-.home{
-    padding-bottom: 3rem;
-    
-    .title{
-        font-size: 3rem;
-        margin: 0;
-        padding: 1.5rem;
-    }
+.favs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
 
     .container{
         display: flex;
@@ -16,21 +14,19 @@
         margin: 0 auto;
         width: 90vw;
         gap: 1rem;
-
-    }
-    
-}
-
-.light{
-    .title{
-        color: $lightFuerte
     }
 }
 
 .dark{
     background-color: $darkClaro;
     
-    .title{
+    h1{
         color: $darkOscuro
+    }
+}
+
+.light{
+    h1{
+        color: $lightFuerte
     }
 }
